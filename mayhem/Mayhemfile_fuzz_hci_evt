@@ -1,0 +1,8 @@
+project: savantenvs/mynewt-nimble
+target: fuzz_hci_evt
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_hci_evt/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_hci_evt
+    libfuzzer: true

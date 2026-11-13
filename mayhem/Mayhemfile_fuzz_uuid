@@ -1,0 +1,8 @@
+project: savantenvs/mynewt-nimble
+target: fuzz_uuid
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_uuid/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_uuid
+    libfuzzer: true
